@@ -1,0 +1,55 @@
+class Kick
+  void do(int power)
+  void interrupt(void)
+  bool isKicking(void)
+end
+
+class PlanMaker
+  Plan do(void)
+end
+
+class Plan
+  bool search_ball
+  bool walk
+  bool kick
+  bool turn
+  int x
+  int y
+  int radian
+end
+
+class PlanPlayer
+  void doPlan(Plan plan)
+end
+
+class GlobalLocation
+  Position getBallPosition(void)
+  Position getSelfPosition(void)
+  Position getSelfPosition(void)
+end
+
+class Position
+  int x
+  int y
+  int z
+  int rx
+  int ry
+  int rz
+end
+
+class LocalLocation
+  Position getBallPosition(void)
+  Position getSelfPosition(void)
+  Position getSelfPosition(void)
+end
+
+class Posture
+  bool isStanding
+  bool isLyng
+end
+
+class GameState
+  bool isPlaying
+  bool isPenalized
+  bool isFinished
+end
