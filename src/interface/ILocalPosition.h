@@ -1,3 +1,5 @@
+#include "../type/Position.h"
+
 class ILocalPosition
 {
  public:

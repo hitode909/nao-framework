@@ -1,3 +1,5 @@
+#include "../type/Plan.h"
+
 class IPlanPlayer
 {
  public:

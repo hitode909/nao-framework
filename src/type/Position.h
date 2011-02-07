@@ -1,5 +1,10 @@
+#ifndef __POSITION_H__
+#define __POSITION_H__
+
 class Position
 {
- pbulic:
+ public:
   int x,y,z,rx,ry,rz;
-}
+};
+
+#endif

@@ -1,5 +1,7 @@
+#include "../type/Plan.h"
+
 class IPlanMaker
 {
  public:
-  virtual int getPlan() = 0;
+  virtual Plan getPlan() = 0;
 };
