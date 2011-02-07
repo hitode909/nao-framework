@@ -1,11 +1,23 @@
 #include "Framework.h"
 
-
 void Framework::run(void){
+  this->setup();
   std::cout << "run" << std::endl
 	    << ip << port << std::endl;
   while (true){
     sleep(1);
-    this->kick->kick(4);
+    this->plan_player->doPlan(this->plan_maker->getPlan());
+    this->kick->framework->kick->kick(4);
   }
+}
+
+void Framework::setup(void) {
+  this->kick->setup(this);
+  this->plan_maker->setup(this);
+  this->plan_player->setup(this);
+  this->global_position->setup(this);
+  this->local_position->setup(this);
+  this->game_state->setup(this);
+  this->posture->setup(this);
+
 }

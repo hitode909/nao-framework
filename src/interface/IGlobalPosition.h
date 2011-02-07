@@ -2,8 +2,9 @@
 #define __IGLOBALPOSITION__H__
 
 #include "../type/Position.h"
+#include "HasFramework.h"
 
-class IGlobalPosition
+class IGlobalPosition : public HasFramework
 {
  public:
   virtual Position getBallPosition() = 0;

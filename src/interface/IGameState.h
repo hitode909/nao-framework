@@ -1,7 +1,9 @@
 #ifndef __IGAMESTATE__H__
 #define __IGAMESTATE__H__
 
-class IGameState
+#include "HasFramework.h"
+
+class IGameState : public HasFramework
 {
  public:
   virtual bool isPlaying() = 0;

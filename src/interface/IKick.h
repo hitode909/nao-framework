@@ -1,7 +1,9 @@
 #ifndef __IKICK_H__
 #define __IKICK_H__
 
-class IKick
+#include "HasFramework.h"
+
+class IKick : public HasFramework
 {
  public:
   virtual void kick(int power) = 0;

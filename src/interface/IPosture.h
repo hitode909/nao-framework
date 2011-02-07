@@ -1,7 +1,9 @@
 #ifndef __IPOSTURE__H__
 #define __IPOSTURE__H__
 
-class IPosture
+#include "HasFramework.h"
+
+class IPosture : public HasFramework
 {
  public:
   virtual bool isStanding() = 0;

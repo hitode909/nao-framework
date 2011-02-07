@@ -2,8 +2,9 @@
 #define __IPLANMAKER__H__
 
 #include "../type/Plan.h"
+#include "HasFramework.h"
 
-class IPlanMaker
+class IPlanMaker : public HasFramework
 {
  public:
   virtual Plan getPlan() = 0;

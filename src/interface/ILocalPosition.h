@@ -2,8 +2,9 @@
 #define __ILOCALPOSITION__H__
 
 #include "../type/Position.h"
+#include "HasFramework.h"
 
-class ILocalPosition
+class ILocalPosition : public HasFramework
 {
  public:
   virtual Position getBallPosition() = 0;
