@@ -1,3 +1,6 @@
+#ifndef __IGAMESTATE__H__
+#define __IGAMESTATE__H__
+
 class IGameState
 {
  public:
@@ -5,3 +8,5 @@ class IGameState
   virtual bool isPenalized() = 0;
   virtual bool isFinished() = 0;
 };
+
+#endif

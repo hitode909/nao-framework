@@ -1,3 +1,6 @@
+#ifndef __ILOCALPOSITION__H__
+#define __ILOCALPOSITION__H__
+
 #include "../type/Position.h"
 
 class ILocalPosition
@@ -7,3 +10,5 @@ class ILocalPosition
   virtual Position getSelfPosition() = 0;
   virtual Position getGoalPosition() = 0;
 };
+
+#endif

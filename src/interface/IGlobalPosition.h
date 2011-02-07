@@ -1,3 +1,6 @@
+#ifndef __IGLOBALPOSITION__H__
+#define __IGLOBALPOSITION__H__
+
 #include "../type/Position.h"
 
 class IGlobalPosition
@@ -7,3 +10,5 @@ class IGlobalPosition
   virtual Position getSelfPosition() = 0;
   virtual Position getGoalPosition() = 0;
 };
+
+#endif
