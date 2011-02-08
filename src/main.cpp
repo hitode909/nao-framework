@@ -1,4 +1,6 @@
 #include <string>
+#include <sstream>
+#include <iostream>
 #include "framework/Framework.cpp"
 #include "mock/MockKick.cpp"
 #include "mock/MockPlanMaker.cpp"
@@ -8,9 +10,20 @@
 #include "mock/MockGameState.cpp"
 #include "mock/MockPosture.cpp"
 
+int main(int argc, char *argv[]) {
+  if (argc != 3) {
+    std::cerr << "./a.out SERVER_HOST SERVER_PORT" << std::endl;
+    exit(1);
+  }
+  std::stringstream ss;
+  int port;
+  std::string ip;
 
+  ss << argv[2];
+  ss >> port;
 
-int main(void){
+  ip = argv[1];
+
   Framework framework;
   MockKick mock_kick;
   MockPlanMaker mock_plan_maker;
@@ -20,8 +33,8 @@ int main(void){
   MockGameState mock_game_state;
   MockPosture mock_posture;
 
-  framework.ip = "123.456.789";
-  framework.port = 1234;
+  framework.ip = ip;
+  framework.port = port;
   framework.kick = &mock_kick;
   framework.plan_maker = &mock_plan_maker;
   framework.plan_player = &mock_paln_player;
