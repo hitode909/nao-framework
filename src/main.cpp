@@ -1,6 +1,7 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <cstdlib>
 #include "framework/Framework.cpp"
 #include "mock/MockKick.cpp"
 #include "mock/MockPlanMaker.cpp"
@@ -13,7 +14,7 @@
 int main(int argc, char *argv[]) {
   if (argc != 3) {
     std::cerr << "./a.out SERVER_HOST SERVER_PORT" << std::endl;
-    exit(1);
+    std::exit(1);
   }
   std::stringstream ss;
   int port;
