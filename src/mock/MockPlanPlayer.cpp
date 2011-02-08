@@ -4,7 +4,7 @@
 class MockPlanPlayer : public IPlanPlayer
 {
 public:
-void doPlan(Plan plan){
-std::cout << "PlanPlayer::void doPlan(Plan plan) called" << std::endl;
-}
+  void doPlan(Plan plan){
+    std::cout << "PlanPlayer::void doPlan(Plan plan) called" << std::endl;
+  }
 };

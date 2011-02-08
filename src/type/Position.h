@@ -4,7 +4,7 @@
 class Position
 {
  public:
-  int x,y,z,rx,ry,rz;
+  double x,y,z,rx,ry,rz;
 };
 
 #endif
