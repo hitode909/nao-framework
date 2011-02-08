@@ -14,7 +14,7 @@
 class Framework{
  public:
 
-  std::string ip;
+  std::string host;
   int port;
   IKick* kick;
   IPlanMaker* plan_maker;

@@ -17,12 +17,12 @@ int main(int argc, char *argv[]) {
   }
   std::stringstream ss;
   int port;
-  std::string ip;
+  std::string host;
 
   ss << argv[2];
   ss >> port;
 
-  ip = argv[1];
+  host = argv[1];
 
   Framework framework;
   MockKick mock_kick;
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
   MockGameState mock_game_state;
   MockPosture mock_posture;
 
-  framework.ip = ip;
+  framework.host = host;
   framework.port = port;
   framework.kick = &mock_kick;
   framework.plan_maker = &mock_plan_maker;

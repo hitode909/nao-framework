@@ -2,8 +2,10 @@
 
 void Framework::run(void){
   this->setup();
-  std::cout << "run" << std::endl
-	    << ip << port << std::endl;
+  std::cout << "run" << std::endl;
+  std::cout << "host: " << this->host << std::endl;
+  std::cout << "port: " << this->port << std::endl;
+
   while (true){
     sleep(1);
     this->plan_player->doPlan(this->plan_maker->getPlan());
