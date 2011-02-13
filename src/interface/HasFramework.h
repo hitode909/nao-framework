@@ -5,8 +5,9 @@ class Framework;
 
 class HasFramework
 {
- public:
+ private:
   Framework* framework;
+ public:
   virtual void step(int time);
   virtual void setup(Framework* framework);
 };
@@ -14,7 +15,3 @@ class HasFramework
 #include "HasFramework.cpp"
 
 #endif
-
-
-
-
