@@ -12,9 +12,9 @@ Dir.glob("interface/I*.h").each{|filename|
     f.puts "{"
     f.puts "public:"
     methods(filename).each{|method|
-      f.puts method + "{"
-      f.puts "std::cout << \"#{module_name}::#{method} called\" << std::endl;"
-      f.puts "}"
+      f.puts "  #{method} {"
+      f.puts "    std::cout << \"#{module_name}::#{method} called\" << std::endl;"
+      f.puts "  }"
     }
     f.puts "};"
 
