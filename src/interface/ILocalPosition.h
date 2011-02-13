@@ -2,12 +2,13 @@
 #define __ILOCALPOSITION__H__
 
 #include "../type/Position.h"
-#include "HasFramework.h"
+#include "../framework/Framework.h"
 #include <vector>
 
-class ILocalPosition : public HasFramework
+class ILocalPosition
 {
  public:
+  virtual void step(Framework* framework) = 0;
   virtual Position getSelfPosition(int clock) = 0;
   virtual Position getBallPosition(int clock) = 0;
   virtual Position getGoalPosition(int clock) = 0;

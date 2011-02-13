@@ -3,26 +3,21 @@
 
 #include <iostream>
 #include <string>
-#include "../interface/IPlanMaker.h"
-#include "../interface/IKick.h"
-#include "../interface/IPlanPlayer.h"
-#include "../interface/IGlobalPosition.h"
-#include "../interface/ILocalPosition.h"
-#include "../interface/IGameState.h"
-#include "../interface/IPosture.h"
+
+class IPlanMaker;
+class IPlanPlayer;
+class IPositionStorage;
+class IGameState;
 
 class Framework{
  public:
 
   std::string host;
   int port;
-  IKick* kick;
   IPlanMaker* plan_maker;
   IPlanPlayer* plan_player;
-  IGlobalPosition* global_position;
-  ILocalPosition* local_position;
+  IPositionStorage* position_storage;
   IGameState* game_state;
-  IPosture* posture;
   
   void run(void);
  private:

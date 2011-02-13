@@ -2,11 +2,12 @@
 #define __IPLANMAKER__H__
 
 #include "../type/Plan.h"
-#include "HasFramework.h"
+#include "../framework/Framework.h"
 
-class IPlanMaker : public HasFramework
+class IPlanMaker
 {
  public:
+  virtual void step(Framework* framework) = 0;
   virtual Plan getPlan() = 0;
 };
 

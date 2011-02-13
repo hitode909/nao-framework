@@ -3,11 +3,12 @@
 
 #include <vector>
 #include "../type/Plan.h"
-#include "HasFramework.h"
+#include "../framework/Framework.h"
 
-class IPlanPlayer : public HasFramework
+class IPlanPlayer
 {
  public:
+  virtual void step(Framework* framework) = 0;
   virtual Plan getPlan() = 0;
   virtual void setPlan(Plan plan) = 0;
 };

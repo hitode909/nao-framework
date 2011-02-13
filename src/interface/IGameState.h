@@ -1,11 +1,12 @@
 #ifndef __IGAMESTATE__H__
 #define __IGAMESTATE__H__
 
-#include "HasFramework.h"
+#include "../framework/Framework.h"
 
-class IGameState : public HasFramework
+class IGameState
 {
  public:
+  virtual void step(Framework* framework) = 0;
   virtual bool isPlaying() = 0;
   virtual bool isInitial() = 0;
   virtual bool isPenalized() = 0;

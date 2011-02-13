@@ -4,16 +4,17 @@
 #include "../interface/ILocalPosition.h"
 #include "../interface/IGlobalPosition.h"
 #include "../type/Position.h"
-#include "HasFramework.h"
+#include "../framework/Framework.h"
 #include <vector>
 
-class IPositionStorage : public HasFramework
+class IPositionStorage
 {
  public:
-  virtual void setLocalPositionInstance(LocalPosition* local_position) = 0;
-  virtual void setGlobalPositionInstance(LocalPosition* global_position) = 0;
+  virtual void step(Framework* framework) = 0;
+  virtual void setLocalPositionInstance(ILocalPosition* local_position) = 0;
+  virtual void setGlobalPositionInstance(IGlobalPosition* global_position) = 0;
 
-  void clear() = 0;
+  virtual void clear() = 0;
 
   virtual Position getSelfLocalPosition(int clock) = 0;
   virtual Position getBallLocalPosition(int clock) = 0;

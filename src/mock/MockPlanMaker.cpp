@@ -4,10 +4,10 @@
 class MockPlanMaker : public IPlanMaker
 {
 public:
-  Plan getPlan(){
+  void step(Framework* framework) {
+    std::cout << "PlanMaker::void step(Framework* framework) called" << std::endl;
+  }
+  Plan getPlan() {
     std::cout << "PlanMaker::Plan getPlan() called" << std::endl;
-    Plan plan;
-    plan.kick = true;
-    return plan;
   }
 };

@@ -1,12 +1,12 @@
 #ifndef __PLAN_H__
 #define __PLAN_H__
 
-#include "../type/Action.h"
+#include "../type/IAction.h"
 #include <vector>
 
 class Plan{
  public:
-  std::vector<Action> actions;
+  std::vector<IAction> actions;
 
   void step(int time);
   bool isRunning();
