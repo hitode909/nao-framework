@@ -7,10 +7,15 @@ void Framework::run(void){
   std::cout << "port: " << this->port << std::endl;
 
   while (true){
-    sleep(1);
+    this->current_clock++;
+    std::cout << "clock: " << this->getClock() << std::endl;
   }
 }
 
 void Framework::setup(void) {
+  this->current_clock = 0;
+}
 
+long Framework::getClock(void) {
+  return this->current_clock;
 }

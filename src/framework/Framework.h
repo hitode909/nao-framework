@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <time.h>
 
 class IPlanMaker;
 class IPlanPlayer;
@@ -14,14 +15,18 @@ class Framework{
 
   std::string host;
   int port;
+
+
   IPlanMaker* plan_maker;
   IPlanPlayer* plan_player;
   IPositionStorage* position_storage;
   IGameState* game_state;
   
   void run(void);
+  long getClock(void);
  private:
   void setup(void);
+  long current_clock;
 };
 
 #endif
