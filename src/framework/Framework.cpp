@@ -6,10 +6,10 @@ void Framework::run(void){
   std::cout << "host: " << this->host << std::endl;
   std::cout << "port: " << this->port << std::endl;
 
-  while (true){
-    this->current_clock++;
-    std::cout << "clock: " << this->getClock() << std::endl;
-  }
+  this->game_state->step(this);
+  this->position_storage->step(this);
+  this->plan_maker->step(this);
+  this->plan_player->step(this);
 }
 
 void Framework::setup(void) {

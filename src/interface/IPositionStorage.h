@@ -4,8 +4,9 @@
 #include "../interface/ILocalPosition.h"
 #include "../interface/IGlobalPosition.h"
 #include "../type/Position.h"
-#include "../framework/Framework.h"
 #include <vector>
+class Framework;
+
 
 class IPositionStorage
 {

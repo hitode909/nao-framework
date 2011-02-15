@@ -5,10 +5,11 @@
 #include <string>
 #include <time.h>
 
-class IPlanMaker;
-class IPlanPlayer;
-class IPositionStorage;
-class IGameState;
+#include "../interface/IGameState.h"
+#include "../interface/IPlanMaker.h"
+#include "../interface/IPlanPlayer.h"
+#include "../interface/IPositionStorage.h"
+#include "../interface/IGameState.h"
 
 class Framework{
  public:
@@ -16,12 +17,11 @@ class Framework{
   std::string host;
   int port;
 
-
   IPlanMaker* plan_maker;
   IPlanPlayer* plan_player;
   IPositionStorage* position_storage;
   IGameState* game_state;
-  
+
   void run(void);
   long getClock(void);
  private:

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "../type/Plan.h"
-#include "../framework/Framework.h"
+class Framework;
 
 class IPlanPlayer
 {

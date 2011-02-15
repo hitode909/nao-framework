@@ -2,7 +2,7 @@
 #define __IPLANMAKER__H__
 
 #include "../type/Plan.h"
-#include "../framework/Framework.h"
+class Framework;
 
 class IPlanMaker
 {

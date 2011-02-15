@@ -1,7 +1,7 @@
 #ifndef __IGAMESTATE__H__
 #define __IGAMESTATE__H__
 
-#include "../framework/Framework.h"
+class Framework;
 
 class IGameState
 {

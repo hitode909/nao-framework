@@ -2,8 +2,8 @@
 #define __IGLOBALPOSITION__H__
 
 #include "../type/Position.h"
-#include "../framework/Framework.h"
 #include <vector>
+class Framework;
 
 class IGlobalPosition
 {

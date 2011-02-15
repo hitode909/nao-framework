@@ -32,8 +32,6 @@ int main(int argc, char *argv[]) {
   MockLocalPosition mock_local_position;
   MockGlobalPosition mock_global_position;
 
-
-
   framework.host = host;
   framework.port = port;
   framework.plan_maker = &mock_plan_maker;
