@@ -25,4 +25,7 @@ public:
   bool isFinish() {
     std::cout << "GameState::bool isFinish() called" << std::endl;
   }
+  game_state getGameState() {
+    std::cout << "GameState::game_state getGameState() called" << std::endl;
+  }
 };
