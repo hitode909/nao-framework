@@ -1,3 +1,5 @@
+hello
+
 class Kick
   void do(int power)
   void interrupt(void)
